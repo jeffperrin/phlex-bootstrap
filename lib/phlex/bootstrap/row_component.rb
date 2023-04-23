@@ -8,5 +8,5 @@ class Phlex::Bootstrap::RowComponent < Phlex::HTML
 
   def template(&) = div(**classes(@classes, :row, with_align?: :"text-#{@align}"), &)
 
-  def with_align? = !@align.nil?
+  def with_align? = @align
 end

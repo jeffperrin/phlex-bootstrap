@@ -9,9 +9,9 @@ class Phlex::Bootstrap::ColumnComponent < Phlex::HTML
 
   def template(&) = div(**classes(@classes, with_align?: :"text-#{@align}", with_size?: :"col-md-#{@size}", without_size?: :"col-md"), &)
 
-  def with_size? = !@size.nil?
+  def with_size? = @size
 
   def without_size? = !with_size?
 
-  def with_align? = !@align.nil?
+  def with_align? = @align
 end
